@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Zemoso Restaurant</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+  <div class="wrapper">
+    <div class = "tables-wrapper">
+      <h3>Tables</h3>
+      <input type="text" class = "card" placeholder="Search Table"
+      onkeyup = "searchTables()" id = "table-search-bar"/>
+      <div class="tables-item-wrapper">
+        <!-- rendered dynammically -->
+      </div>
+    </div>
+    <div class = "menu-wrapper">
+        <h3>Menu</h3>
+        <input type="text" class = "card" placeholder="Search menu...,by course, by food" onkeyup="searchMenu()" id = "menu-search-bar"/>
+        <div class="menu-item-wrapper">
+         <!-- rendered dynammically -->
+        </div>
+    </div>
+  </div>
+  <div class="modal-wrapper">
+    <div class="modal">
+      <header>
+        <h3 id = "modal-heading"><!--rendered dynammically --></h3>
+        <button onclick="closeModal()">X</button>
+      </header>
+      <div class="modal-content">
+       <table>
+         <thead>
+           <tr>
+             <th>S.NO</th>
+             <th>Item</th>
+             <th>Price</th>
+             <th>Number of Servings</th>
+             <th></th>
+           </tr>
+         </thead>
+         <tbody class = "modal-content-body">
+           <!-- dynamic -->
+         </tbody>
+       </table>
+       <p id = "modal-cost"><!-- dynamic --></p>
+
+      </div>
+      <footer>
+        <h4 onclick="generateBill()">CLOSE SESSION (GENERATE BILL)</h4>
+      </footer>
+    </div>
+  </div>
+  <script src="script.js" charset="utf-8"></script>
+</body>
+</html>
